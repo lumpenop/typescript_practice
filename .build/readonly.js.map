@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../readonly.ts"],
+  "sourcesContent": ["type MyReadonly<T> = { readonly [K in keyof T]: T[K] }\n\n\ninterface Todo {\n  title: string\n}\n\nconst todo: MyReadonly<Todo> = {\n  title: 'hi'\n}\n\ntodo.title = 'hello' // readonly"],
+  "mappings": ";AAOA,MAAM,OAAyB;AAAA,EAC7B,OAAO;AACT;AAEA,KAAK,QAAQ;",
+  "names": []
+}
