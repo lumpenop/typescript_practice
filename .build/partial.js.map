@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../partial.ts"],
-  "sourcesContent": ["\ntype MyPartial<T> = {\n  [K in keyof T]?: T[K]\n}\n\ninterface Todo {\n  title: string;\n  description: string;\n}\n\nfunction updateTodo(todo: Todo, fieldsToUpdate: MyPartial<Todo>) {\n  return { ...todo, ...fieldsToUpdate };\n}\n\nconst todo1 = {\n  title: \"organize desk\",\n  description: \"clear clutter\",\n};\n\nconst todo2 = updateTodo(todo1, {\n  description: \"throw out trash\",\n});\n\nconsole.log(todo2);\n"],
+  "sourcesContent": ["\ntype MyPartial<T> = {\n  [K in keyof T]?: T[K]\n}\n\ninterface Todo {\n  title: string;\n  description: string;\n}\n\nfunction updateTodo(todo: Todo, fieldsToUpdate: MyPartial<Todo>) {\n  return { ...todo, ...fieldsToUpdate };\n}\n\nconst todo1 = {\n  title: \"organize desk\",\n  description: \"clear clutter\",\n};\n\nconst todo2 = updateTodo(todo1, {\n  description: \"throw out trash\",\n});\n\nconsole.log(todo2)"],
   "mappings": ";AAUA,SAAS,WAAW,MAAY,gBAAiC;AAC/D,SAAO,EAAE,GAAG,MAAM,GAAG,eAAe;AACtC;AAEA,MAAM,QAAQ;AAAA,EACZ,OAAO;AAAA,EACP,aAAa;AACf;AAEA,MAAM,QAAQ,WAAW,OAAO;AAAA,EAC9B,aAAa;AACf,CAAC;AAED,QAAQ,IAAI,KAAK;",
   "names": []
 }

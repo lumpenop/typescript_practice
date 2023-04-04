@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../required.ts"],
+  "sourcesContent": ["type MyRequired<T> = {\n  [K in keyof T]-?: T[K]\n}\n\ninterface Props {\n  a?: number;\n  b?: string;\n}\n \nconst obj: Props = { a: 5 };\n \nconst obj2: Required<Props> = { a: 5 };\n"],
+  "mappings": ";AASA,MAAM,MAAa,EAAE,GAAG,EAAE;AAE1B,MAAM,OAAwB,EAAE,GAAG,EAAE;",
+  "names": []
+}
